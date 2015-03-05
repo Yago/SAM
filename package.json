@@ -1,0 +1,16 @@
+{
+  "name": "Sam",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Yann Gouffon <yago@yago-art.ch>",
+  "description": "Un assistant personnel omniscient",
+  "dependencies": {
+    "hubot": "^2.11.1",
+    "hubot-diagnostics": "0.0.1",
+    "hubot-help": "^0.1.1",
+    "hubot-tellbot": "^1.0.6"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
