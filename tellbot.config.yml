@@ -1,0 +1,6 @@
+---
+probability: 1
+patterns:
+  - patterns/basic-talk.yml
+events:
+  - events/tell.coffee
