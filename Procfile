@@ -1,1 +1,1 @@
-web: bin/hubot -a hangups -n Sam
+web: bin/hubot -a qq -n Sam
