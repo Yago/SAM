@@ -3,5 +3,6 @@ cloudant = require path.join '..', 'plugins', 'cloudant.js';
 
 module.exports = (robot) ->
 
-  robot.hear /message/i, (msg) ->
-    cloudant.push 'last-message', msg.message.text
+  robot.hear /last/i, (msg) ->
+    cloudant.pull 'last-message', (data) ->
+      msg.send data
