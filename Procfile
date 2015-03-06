@@ -1,1 +1,1 @@
-web: bin/hubot -a qq -n Sam
+web: bin/hubot --adapter slack --name Sam

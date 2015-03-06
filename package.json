@@ -10,6 +10,7 @@
     "hubot-hangups": "^1.0.1",
     "hubot-help": "^0.1.1",
     "hubot-qq": "^1.4.0",
+    "hubot-slack": "^3.3.0",
     "hubot-tellbot": "^1.0.6"
   },
   "engines": {
