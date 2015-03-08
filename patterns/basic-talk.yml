@@ -2,7 +2,18 @@ interactions:
 
     - pattern:
         regex: >-
-          (hi|hello|hey)(!|,)? ##heartbot##!?
-      event: say
-      message: Hi $user!
-      probability: 1
+          (salut|tcho|hello|coucou)(!|,)?
+      event: tell
+      message:
+        - "Salut $user !"
+        - "Hello :blush:"
+        - "Hello :smile:"
+
+    - pattern:
+        regex: >-
+          (merci|simpa)(!|,)?
+      event: tell
+      message:
+        - "De rien $user :wink:"
+        - "Pas de soucis :wink:"
+        - "Ce fut un plaisir :kissing_heart:"

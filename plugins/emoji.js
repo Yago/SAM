@@ -832,8 +832,10 @@ var list = {
 
 function replaceEmoji (message) {
   var messageEmoji = message.match(/\:\w*\:/gi);
-  for (var i = messageEmoji.length - 1; i >= 0; i--) {
-    message = message.replace(messageEmoji[i],list[messageEmoji[i]]);
+  if (messageEmoji) {
+    for (var i = messageEmoji.length - 1; i >= 0; i--) {
+      message = message.replace(messageEmoji[i],list[messageEmoji[i]]);
+    };
   };
   return message;
 }
