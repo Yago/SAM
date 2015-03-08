@@ -1,4 +1,5 @@
 path = require 'path'
+emojis = require path.join '..', 'plugins', 'emoji.js'
 {msgVariables, stringElseRandomKey} = require path.join '..', 'node_modules', 'hubot-tellbot', 'lib', 'common.coffee'
 
 class tell
@@ -13,7 +14,9 @@ class tell
 
     message = stringElseRandomKey @interaction.message
 
-    message = msgVariables message, msg
+    emojified = emojis.print message
+
+    message = msgVariables emojified, msg
     msg[messageType] message
 
 module.exports = tell
