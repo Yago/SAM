@@ -25,4 +25,5 @@ module.exports = (robot) ->
           mapUrl = "http://maps.google.com/maps?hl=fr&q="+coord+"&z=17"
 
           msg.send staticMap
-          msg.send mapUrl
+          msg.send "Alors, "+msg.match[2]+msg.match[1]+msg.match[2]+"plus proche est "+msg.match[2]+result.results[0].name+", "+result.results[0].vicinity+"."
+          msg.send "📍 => "+mapUrl+""
