@@ -8,6 +8,12 @@ module.exports = (robot) ->
   robot.hear /^\d*\.\d*\,\d*\.\d*$/, (msg) ->
     cloudant.push 'last-position', msg.message.text.replace /^sam\s/, ''
 
+  robot.hear /(^https\:\/\/maps\.google\.com\/\?ll\=)(\d*\.\d*\,\d*\.\d*)(\&z\=\d*$)/, (msg) ->
+    cloudant.push 'last-position', msg.match[2]
+
+  robot.hear /(^sam\s)(https\:\/\/maps\.google\.com\/\?ll\=)(\d*\.\d*\,\d*\.\d*)(\&z\=\d*$)/, (msg) ->
+    cloudant.push 'last-position', msg.match[3]
+
   # Search https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=46.569222,6.828633&radius=5000&name=postomat&key=mykeyhere
 
   robot.hear /(\w*\s)((la|le)\s)(plus\sproche)/, (msg) ->
